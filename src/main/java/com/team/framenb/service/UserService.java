@@ -1,6 +1,6 @@
 package com.team.framenb.service;
 
-import com.team.framenb.dao.UserDaoImpl;
+import com.team.framenb.repository.UserRepository;
 import com.team.framenb.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ import java.util.List;
 public class UserService {
 
     @Autowired
-    private UserDaoImpl userDao;
+    private UserRepository userDao;
 
     public User findUserByName(String name){
         return this.userDao.findByName(name);

@@ -1,4 +1,4 @@
-package com.team.framenb.dao;
+package com.team.framenb.repository;
 
 import com.team.framenb.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Repository
-public interface UserDaoImpl extends JpaRepository<User, Serializable> {
+public interface UserRepository extends JpaRepository<User, Serializable> {
 
     public User findByName(String name);
 

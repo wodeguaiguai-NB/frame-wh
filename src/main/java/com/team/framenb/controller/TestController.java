@@ -5,7 +5,8 @@ import com.team.framenb.entity.User;
 import com.team.framenb.service.UserService;
 import com.team.framenb.vo.UserVo;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,8 +24,7 @@ import java.util.List;
 @RequestMapping("/")
 public class TestController {
 
-    Logger logger = Logger.getLogger(TestController.class);
-
+    Logger logger = LoggerFactory.getLogger(TestController.class);
     @Autowired
     private UserService userService;
 
