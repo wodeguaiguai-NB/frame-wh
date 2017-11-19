@@ -1,5 +1,6 @@
 package com.team.framenb.service;
 
+import com.team.framenb.annotation.AopAnnotation;
 import com.team.framenb.repository.UserRepository;
 import com.team.framenb.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +20,12 @@ public class UserService {
     @Autowired
     private UserRepository userDao;
 
+    @AopAnnotation
     public User findUserByName(String name){
         return this.userDao.findByName(name);
     }
 
+    @AopAnnotation
     public User findUserById(Integer userId){
         return this.userDao.findById(userId);
     }
