@@ -1,0 +1,19 @@
+server:
+  port: 7777
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://192.168.1.103:5432/haohao
+    username: postgres
+    password: postgres
+  redis:
+    database: 0
+    host: 192.168.1.103
+    port: 6379
+    password: redis
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
