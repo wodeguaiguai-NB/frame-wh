@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--设置log4j2的自身log级别为warn-->
-<configuration status="OFF">
+<configuration status="INFO">
 
     <appenders>
         <console name="Console" target="SYSTEM_OUT">
@@ -50,6 +50,8 @@
         <logger name="org.springframework" level="INFO">
         </logger>
         <logger name="org.hibernate" level="INFO">
+        </logger>
+        <logger name="org.hibernate" level="DEBUG">
         </logger>
         <root level="all">
             <appender-ref ref="Console"/>

@@ -1,5 +1,17 @@
 server:
   port: 7777
+management:
+  server:
+    port: 54001
+    context-path: /health
+  health:
+    mail:
+      enabled: false
+  endpoint:
+    beans:
+      enabled: true
+
+
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -17,3 +29,4 @@ spring:
       ddl-auto: update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+

@@ -35,7 +35,8 @@ public class ControllerInterceptor {
 
         MethodSignature signature = (MethodSignature) pjp.getSignature();
 
-        Method method = signature.getMethod(); // 方法
+        // 方法
+        Method method = signature.getMethod();
 
         String methodName = method.getName();
 
