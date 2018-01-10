@@ -15,12 +15,12 @@ management:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://192.168.1.103:5432/haohao
+    url: jdbc:postgresql://192.168.1.102:5432/haohao
     username: postgres
     password: postgres
   redis:
     database: 0
-    host: 192.168.1.103
+    host: 192.168.1.102
     port: 6379
     password: redis
   jpa:
