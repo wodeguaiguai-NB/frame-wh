@@ -31,7 +31,7 @@ public class ControllerInterceptor {
     public void controllerPointCut(){}
 
     @Around("controllerPointCut()")
-    public boolean startRequest(ProceedingJoinPoint pjp) throws Exception {
+    public void startRequest(ProceedingJoinPoint pjp) throws Exception {
 
         MethodSignature signature = (MethodSignature) pjp.getSignature();
 
@@ -56,7 +56,15 @@ public class ControllerInterceptor {
         logger.info("===请求处理开始==="+DateFormatUtils.format(new Date(),"yyyy-MM-dd hh:mm:ss"));
         logger.info("method:"+methodName);
         logger.info("params："+ sb.toString());
-        return true;
+        
+        try {
+			pjp.proceed();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+        logger.info("===请求处理结束==="+ DateFormatUtils.format(new Date(),"yyyy-MM-dd hh:mm:ss"));
     }
 
     public void endResqest() throws Exception {

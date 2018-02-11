@@ -1,5 +1,5 @@
 server:
-  port: 7777
+  port: 8080
 management:
   server:
     port: 54001
@@ -15,12 +15,12 @@ management:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://192.168.1.102:5432/haohao
+    url: jdbc:postgresql://192.168.1.15:5432/rms_miniapp
     username: postgres
     password: postgres
   redis:
     database: 0
-    host: 192.168.1.102
+    host: 192.168.1.15
     port: 6379
     password: redis
   jpa:
