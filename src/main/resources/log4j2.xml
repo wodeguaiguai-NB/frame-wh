@@ -4,6 +4,9 @@
 
     <appenders>
         <console name="Console" target="SYSTEM_OUT">
+        	<ThresholdFilter level="INFO"/>
+        	<ThresholdFilter level="WARN" onMatch="DENY" onMismatch="NEUTRAL"/>
+        	<ThresholdFilter level="ERROR" onMatch="DENY" onMismatch="NEUTRAL"/>
             <PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%t] [%p] - %l - %m%n"/>
         </console>
 
