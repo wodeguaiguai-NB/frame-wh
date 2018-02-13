@@ -1,5 +1,5 @@
 # frame-wh
--*- Efficiency comes from diligence. And in shortage in the play ground transportation into Si, and destroyed with。业精于勤而荒于嬉,行成于思而毁于随 -*-
+* Efficiency comes from diligence. And in shortage in the play ground transportation into Si, and destroyed with。业精于勤而荒于嬉,行成于思而毁于随 *
 
 ## 相关资料
 #### 程序员DD的blog http://blog.didispace.com
