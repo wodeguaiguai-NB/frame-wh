@@ -1,17 +1,12 @@
 server:
   port: 8080
+  
+  
 management:
-  server:
-    port: 54001
-    context-path: /health
-  health:
-    mail:
-      enabled: false
-  endpoint:
-    beans:
-      enabled: true
-
-
+    server:
+      port: 54001
+    
+    
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver

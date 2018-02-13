@@ -50,11 +50,11 @@
 
     <loggers>
         <!--过滤掉spring和hibernate的一些无用的debug信息-->
-        <logger name="org.springframework" level="INFO">
+        <logger name="org.springframework" level="ERROR">
         </logger>
-        <logger name="org.hibernate" level="INFO">
+        <logger name="org.hibernate" level="ERROR">
         </logger>
-        <logger name="org.hibernate" level="DEBUG">
+        <logger name="springfox.documentation" level="ERROR">
         </logger>
         <root level="all">
             <appender-ref ref="Console"/>
