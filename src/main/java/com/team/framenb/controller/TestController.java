@@ -3,6 +3,7 @@ package com.team.framenb.controller;
 import com.google.gson.GsonBuilder;
 import com.team.framenb.entity.User;
 import com.team.framenb.service.UserService;
+import com.team.framenb.utils.GSONUtil;
 import com.team.framenb.vo.UserVo;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
@@ -45,7 +46,7 @@ public class TestController {
     public void add(@RequestBody UserVo userVo, HttpServletResponse response) throws Exception{
         User user = this.userService.addUser(userVo.getName(),userVo.getAge());
 
-        response.getWriter().write(new GsonBuilder().create().toJson(user));
+        response.getWriter().write(GSONUtil.getGson().toJson(user));
 
     }
 
@@ -54,7 +55,7 @@ public class TestController {
     @GetMapping("/user/find/{id}")
     public void findUserByName(@PathVariable Integer id ,HttpServletRequest request, HttpServletResponse response) throws Exception{
         User user = this.userService.findUserById(id);
-        response.getWriter().write(new GsonBuilder().create().toJson(user));
+        response.getWriter().write(GSONUtil.getGson().toJson(user));
     }
 
     @ApiOperation(value = "获取人员列表", notes = "根据url中的name查找人员列表")
@@ -62,6 +63,6 @@ public class TestController {
     public void findAllUserByName(@PathVariable String name ,HttpServletRequest request, HttpServletResponse response) throws Exception{
         List<User> users = this.userService.findAllUserByName(name);
 
-        response.getWriter().write(new GsonBuilder().create().toJson(users));
+        response.getWriter().write(GSONUtil.getGson().toJson(users));
     }
 }
