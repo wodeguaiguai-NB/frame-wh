@@ -18,6 +18,10 @@ spring:
       ddl-auto: update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  security:
+    user:
+      name: admin
+      password: admin
 management:
   endpoint:
     health:
