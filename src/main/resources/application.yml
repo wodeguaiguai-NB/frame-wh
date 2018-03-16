@@ -22,6 +22,9 @@ spring:
     user:
       name: admin
       password: admin
+  mvc:
+    favicon:
+      enabled: false
 management:
   endpoint:
     health:
